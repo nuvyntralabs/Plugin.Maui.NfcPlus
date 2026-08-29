@@ -12,6 +12,7 @@ sealed class NfcPlusImplementation : INfcPlus, IDisposable
     TaskCompletionSource<NfcTag>? _pendingTag;
     bool _keepListening;
     bool _disposed;
+    DateTimeOffset _lastListenRestart;
 
     public NfcPlusImplementation(NfcPlusOptions options, INfcTransport transport)
     {
@@ -188,6 +189,8 @@ sealed class NfcPlusImplementation : INfcPlus, IDisposable
             return;
 
         _disposed = true;
+        _keepListening = false;
+        FailPending(new NfcPlusException(NfcPlusError.Cancelled, "The NFC session was disposed."));
         _transport.AvailabilityChanged -= OnAvailabilityChanged;
         _transport.NativeSessionEnded -= OnNativeSessionEnded;
         _transport.Dispose();
@@ -346,13 +349,18 @@ sealed class NfcPlusImplementation : INfcPlus, IDisposable
             ReasonToError(e.Reason),
             e.Reason ?? "The NFC session ended."));
 
+        NfcSessionOptions? restart = null;
         lock (_gate)
         {
-            if (!_keepListening)
+            if (_keepListening && !_disposed)
+                restart = _listenOptions;
+            else
                 _state = NfcSessionState.Idle;
         }
 
         SessionChanged?.Invoke(this, e);
+        if (restart is not null && !_disposed)
+            _ = RestartListeningAsync(restart);
     }
 
     void OnAvailabilityChanged(object? sender, NfcAvailabilityChangedEventArgs e) =>
@@ -387,6 +395,31 @@ sealed class NfcPlusImplementation : INfcPlus, IDisposable
             _state = state;
 
         SessionChanged?.Invoke(this, new NfcSessionChangedEventArgs(state, reason));
+    }
+
+    async Task RestartListeningAsync(NfcSessionOptions options)
+    {
+        try
+        {
+            if (_disposed || !_keepListening)
+                return;
+
+            var now = DateTimeOffset.UtcNow;
+            lock (_gate)
+            {
+                if (now - _lastListenRestart < TimeSpan.FromSeconds(1))
+                    return;
+
+                _lastListenRestart = now;
+            }
+
+            await StartAsync(options).ConfigureAwait(false);
+        }
+        catch
+        {
+            if (!_disposed)
+                SetState(NfcSessionState.Idle, "keep-listening restart failed");
+        }
     }
 
     void FailPending(Exception exception)

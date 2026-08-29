@@ -29,8 +29,8 @@
     <PackageProjectUrl>https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus</PackageProjectUrl>
     <RepositoryUrl>https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.0</Version>
-    <PackageReleaseNotes>Initial release: session-based NFC with NDEF text/URI/MIME read and write, tag IDs, availability detection, Android reader mode / foreground dispatch, and iOS CoreNFC sessions.</PackageReleaseNotes>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Reliability fixes for races, dispose/lifecycle, and lock or session correctness.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

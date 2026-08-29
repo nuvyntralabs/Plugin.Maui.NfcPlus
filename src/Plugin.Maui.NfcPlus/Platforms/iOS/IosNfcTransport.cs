@@ -86,8 +86,16 @@ sealed class IosNfcTransport : INfcTransport
             return;
 
         _disposed = true;
-        _session?.InvalidateSession();
+        var session = _session;
         _session = null;
+        if (session is not null)
+        {
+            if (MainThread.IsMainThread)
+                session.InvalidateSession();
+            else
+                MainThread.BeginInvokeOnMainThread(session.InvalidateSession);
+        }
+
         _delegate.Dispose();
     }
 
