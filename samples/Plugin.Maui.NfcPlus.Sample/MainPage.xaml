@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Plugin.Maui.NfcPlus.Sample.MainPage"
+             Title="Plugin.Maui.NfcPlus">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="10">
+            <Label Text="Plugin.Maui.NfcPlus" FontSize="22" FontAttributes="Bold" />
+            <Label Text="NDEF · text · URI · MIME · tag ID · session"
+                   TextColor="Gray" />
+
+            <Label x:Name="AvailabilityLabel" FontSize="13" LineBreakMode="WordWrap" />
+            <Label x:Name="SessionLabel" FontSize="13" TextColor="Gray" />
+
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Start" Clicked="OnStartClicked" />
+                <Button Text="Read" Clicked="OnReadClicked" />
+                <Button Text="Stop" Clicked="OnStopClicked" />
+            </HorizontalStackLayout>
+
+            <Label Text="Write next tag" FontAttributes="Bold" Margin="0,8,0,0" />
+            <Entry x:Name="PayloadEntry" Placeholder="Text or URI to write" Text="SKU-1042" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Write text" Clicked="OnWriteTextClicked" />
+                <Button Text="Write URI" Clicked="OnWriteUriClicked" />
+            </HorizontalStackLayout>
+
+            <Label Text="Real-world payloads" FontAttributes="Bold" Margin="0,8,0,0" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Product" Clicked="OnProductClicked" />
+                <Button Text="Employee" Clicked="OnEmployeeClicked" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Asset" Clicked="OnAssetClicked" />
+                <Button Text="Vehicle" Clicked="OnVehicleClicked" />
+            </HorizontalStackLayout>
+
+            <Button Text="Open NFC settings" Clicked="OnSettingsClicked" />
+
+            <Label Text="Last tag" FontAttributes="Bold" Margin="0,8,0,0" />
+            <Label x:Name="TagLabel" FontFamily="Courier New" FontSize="13" LineBreakMode="WordWrap" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

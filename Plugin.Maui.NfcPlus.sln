@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Maui.NfcPlus", "src\Plugin.Maui.NfcPlus\Plugin.Maui.NfcPlus.csproj", "{A11E1A90-4B2D-4F18-9E6A-1D8C0B4A5F21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Maui.NfcPlus.Sample", "samples\Plugin.Maui.NfcPlus.Sample\Plugin.Maui.NfcPlus.Sample.csproj", "{B22F2B01-5C3E-4029-8F7B-2E9D1C5B6A32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Maui.NfcPlus.Tests", "tests\Plugin.Maui.NfcPlus.Tests\Plugin.Maui.NfcPlus.Tests.csproj", "{C33A3C12-6D4F-413A-9A8C-3F0E2D6C7B43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A11E1A90-4B2D-4F18-9E6A-1D8C0B4A5F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11E1A90-4B2D-4F18-9E6A-1D8C0B4A5F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11E1A90-4B2D-4F18-9E6A-1D8C0B4A5F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11E1A90-4B2D-4F18-9E6A-1D8C0B4A5F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22F2B01-5C3E-4029-8F7B-2E9D1C5B6A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22F2B01-5C3E-4029-8F7B-2E9D1C5B6A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22F2B01-5C3E-4029-8F7B-2E9D1C5B6A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22F2B01-5C3E-4029-8F7B-2E9D1C5B6A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33A3C12-6D4F-413A-9A8C-3F0E2D6C7B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33A3C12-6D4F-413A-9A8C-3F0E2D6C7B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33A3C12-6D4F-413A-9A8C-3F0E2D6C7B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33A3C12-6D4F-413A-9A8C-3F0E2D6C7B43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
