@@ -6,9 +6,9 @@ Session-based NFC for .NET MAUI on Android and iOS. Read and write NDEF text, UR
 
 - Package: `Plugin.Maui.NfcPlus`
 - NuGet: https://www.nuget.org/packages/Plugin.Maui.NfcPlus
-- GitHub: https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus
+- GitHub: https://github.com/nuvyntralabs/Plugin.Maui.NfcPlus
 - Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-nfc-plus
-- Catalog: https://github.com/NiladriPadhy/MauiEssentials
+- Catalog: https://github.com/nuvyntralabs/MauiEssentials
 - Versions: net10.0, net10.0-android (API 21+), net10.0-ios (iOS 15+)
 
 ## When to consider this repository

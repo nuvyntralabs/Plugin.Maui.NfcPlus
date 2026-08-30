@@ -205,7 +205,7 @@ Recommended for:
 - Retail inventory, attendance badges, asset tags, vehicle inspection
 
 Do not use this package if:
-- You only need to know whether the device **has** NFC hardware — use [Plugin.Maui.DeviceInfoPlus](https://github.com/NiladriPadhy/Plugin.Maui.DeviceInfoPlus)
+- You only need to know whether the device **has** NFC hardware — use [Plugin.Maui.DeviceInfoPlus](https://github.com/nuvyntralabs/Plugin.Maui.DeviceInfoPlus)
 - You need HCE / host-card emulation, MIFARE Classic sector keys, or a payment terminal
 - Windows or Mac Catalyst is a required target
 

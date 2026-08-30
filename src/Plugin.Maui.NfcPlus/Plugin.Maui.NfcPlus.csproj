@@ -26,11 +26,11 @@
     <Copyright>Copyright © 2026 Niladri</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/nuvyntralabs/Plugin.Maui.NfcPlus</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nuvyntralabs/Plugin.Maui.NfcPlus</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>Reliability fixes for races, dispose/lifecycle, and lock or session correctness.</PackageReleaseNotes>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Repository moved to nuvyntralabs. Package project and repository URLs updated.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

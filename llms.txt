@@ -2,10 +2,10 @@
 
 Session-based NFC for .NET MAUI on Android and iOS. NDEF text / URI / MIME read and write, tag IDs, foreground dispatch / CoreNFC sessions, and availability detection. Not a hardware-only probe.
 
-Repository: https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus
+Repository: https://github.com/nuvyntralabs/Plugin.Maui.NfcPlus
 NuGet: https://www.nuget.org/packages/Plugin.Maui.NfcPlus
 Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-nfc-plus
-Catalog: https://github.com/NiladriPadhy/MauiEssentials
+Catalog: https://github.com/nuvyntralabs/MauiEssentials
 License: MIT
 
 ## Supported versions
@@ -36,9 +36,9 @@ Registration: `UseNfcPlus` — see README.md.
 
 ## Documentation
 
-https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus
-https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus#readme
+https://github.com/nuvyntralabs/Plugin.Maui.NfcPlus
+https://github.com/nuvyntralabs/Plugin.Maui.NfcPlus#readme
 
 ## Source
 
-https://github.com/NiladriPadhy/Plugin.Maui.NfcPlus
+https://github.com/nuvyntralabs/Plugin.Maui.NfcPlus
